@@ -1,560 +1,650 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#111111">
-<meta name="description" content="متجر اليماني للمنتجات الرقمية وقوالب الأعمال والتجارة الإلكترونية والمنتجات المعرفية.">
-<title>ALYAMANI STORE | متجر اليماني</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<style>
-:root {
-    --black: #111111;
-    --dark: #1b1b1b;
-    --gold: #d4af37;
-    --light-gold: #f4d675;
-    --white: #ffffff;
-    --gray: #c5c5c5;
-    --green: #25D366;
-}
+  <title>متجر اليماني | ALYAMANI STORE</title>
 
-* {
-    box-sizing: border-box;
-}
+  <meta name="description" content="متجر اليماني للمنتجات الرقمية: أدوات إدارة المتاجر والمبيعات والإعلانات، وحزمة التحرر من إدمان الهاتف.">
 
-html {
-    scroll-behavior: smooth;
-}
+  <meta name="theme-color" content="#111111">
 
-body {
-    margin: 0;
-    font-family: Tahoma, Arial, sans-serif;
-    background: var(--black);
-    color: var(--white);
-    line-height: 1.9;
-}
-
-a {
-    text-decoration: none;
-}
-
-.container {
-    width: 92%;
-    max-width: 1100px;
-    margin: auto;
-}
-
-header {
-    background: #080808;
-    border-bottom: 1px solid #5b4a19;
-    padding: 18px 0;
-}
-
-.header-content {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 15px;
-    flex-wrap: wrap;
-}
-
-.logo {
-    color: var(--gold);
-    font-size: 24px;
-    font-weight: bold;
-}
-
-.logo small {
-    display: block;
-    color: white;
-    font-size: 14px;
-    font-weight: normal;
-}
-
-.header-button,
-.hero-button {
-    display: inline-block;
-    background: var(--gold);
-    color: #111;
-    padding: 10px 19px;
-    border-radius: 8px;
-    font-weight: bold;
-}
-
-.hero {
-    text-align: center;
-    padding: 65px 15px;
-    background: radial-gradient(ellipse at top, #38301b, #111 75%);
-}
-
-.hero h1 {
-    color: var(--gold);
-    font-size: clamp(28px, 5vw, 43px);
-    line-height: 1.5;
-    margin: 0 0 15px;
-}
-
-.hero p {
-    max-width: 730px;
-    margin: 0 auto 25px;
-    color: #eeeeee;
-    font-size: 17px;
-}
-
-.section {
-    padding: 45px 0;
-}
-
-.section-title {
-    text-align: center;
-    color: var(--gold);
-    font-size: 28px;
-    margin: 0 0 10px;
-}
-
-.section-description {
-    text-align: center;
-    color: var(--gray);
-    margin: 0 auto 30px;
-    max-width: 750px;
-}
-
-.products {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 22px;
-}
-
-.product-card {
-    background: var(--dark);
-    border: 1px solid #51431c;
-    border-radius: 14px;
-    padding: 23px;
-    display: flex;
-    flex-direction: column;
-}
-
-.product-icon {
-    font-size: 38px;
-    margin-bottom: 8px;
-}
-
-.product-card h3 {
-    color: var(--gold);
-    font-size: 21px;
-    line-height: 1.7;
-    margin: 0 0 5px;
-}
-
-.english-name {
-    color: #d5d5d5;
-    font-size: 14px;
-    direction: ltr;
-    text-align: right;
-    margin-bottom: 14px;
-    overflow-wrap: anywhere;
-}
-
-.product-description {
-    color: #e1e1e1;
-    font-size: 15px;
-    margin: 0 0 13px;
-}
-
-.features-title {
-    color: var(--light-gold);
-    font-weight: bold;
-    margin: 5px 0;
-}
-
-.features {
-    padding-right: 22px;
-    margin: 0 0 20px;
-    color: #eeeeee;
-    font-size: 14px;
-}
-
-.features li {
-    margin-bottom: 4px;
-}
-
-.product-note {
-    color: var(--gray);
-    font-size: 13px;
-    margin-top: auto;
-    padding-top: 8px;
-}
-
-.buy-button {
-    display: block;
-    text-align: center;
-    background: var(--gold);
-    color: #111111;
-    font-weight: bold;
-    padding: 12px;
-    border-radius: 8px;
-    margin-top: 18px;
-}
-
-.buy-button:hover,
-.header-button:hover,
-.hero-button:hover {
-    background: var(--light-gold);
-}
-
-.contact {
-    background: #1b1b1b;
-    border-top: 1px solid #51431c;
-    border-bottom: 1px solid #51431c;
-    padding: 40px 15px;
-    text-align: center;
-}
-
-.contact h2 {
-    color: var(--gold);
-    margin-top: 0;
-}
-
-.contact p {
-    color: #eeeeee;
-}
-
-.whatsapp-button {
-    display: inline-block;
-    background: var(--green);
-    color: #07150b;
-    padding: 12px 24px;
-    border-radius: 8px;
-    font-weight: bold;
-    margin-top: 10px;
-}
-
-.notice {
-    color: var(--gray);
-    text-align: center;
-    font-size: 13px;
-    margin: 28px auto 0;
-    max-width: 800px;
-}
-
-footer {
-    text-align: center;
-    padding: 23px 12px;
-    color: var(--gray);
-    font-size: 13px;
-}
-
-footer strong {
-    color: var(--gold);
-}
-
-@media (max-width: 650px) {
-    .products {
-        grid-template-columns: 1fr;
+  <style>
+    :root {
+      --black: #111111;
+      --dark: #1b1b1b;
+      --gold: #d6ad55;
+      --light-gold: #f2d58b;
+      --white: #ffffff;
+      --gray: #c9c9c9;
+      --green: #168a50;
     }
 
-    .hero {
-        padding: 45px 15px;
+    * {
+      box-sizing: border-box;
     }
 
-    .header-content {
-        justify-content: center;
-        text-align: center;
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: var(--black);
+      color: var(--white);
+      font-family: Arial, Tahoma, sans-serif;
+      line-height: 1.9;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    .container {
+      width: 92%;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    header {
+      background: #080808;
+      border-bottom: 2px solid var(--gold);
+      padding: 22px 0;
+      text-align: center;
     }
 
     .logo {
-        width: 100%;
+      color: var(--gold);
+      font-size: 29px;
+      font-weight: bold;
+      margin: 0;
+    }
+
+    .brand-ar {
+      font-size: 18px;
+      color: var(--white);
+      margin: 4px 0;
+    }
+
+    .tagline {
+      color: var(--gray);
+      margin: 5px 0 0;
+      font-size: 14px;
+    }
+
+    .hero {
+      padding: 42px 0;
+      text-align: center;
+      background: linear-gradient(180deg, #202020, #111111);
+    }
+
+    .hero h2 {
+      color: var(--gold);
+      font-size: 27px;
+      margin: 0 0 12px;
+    }
+
+    .hero p {
+      max-width: 720px;
+      margin: auto;
+      color: #e0e0e0;
+      font-size: 16px;
+    }
+
+    .section-title {
+      text-align: center;
+      color: var(--gold);
+      margin: 35px 0 22px;
+      font-size: 25px;
+    }
+
+    .products {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 22px;
+      padding-bottom: 35px;
     }
 
     .product-card {
-        padding: 20px;
+      background: var(--dark);
+      border: 1px solid #49402b;
+      border-radius: 14px;
+      padding: 22px;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 5px 16px rgba(0, 0, 0, 0.22);
     }
 
-    .section {
-        padding: 32px 0;
+    .product-number {
+      color: var(--gold);
+      font-size: 13px;
+      margin-bottom: 5px;
     }
-}
-</style>
+
+    .product-card h3 {
+      color: var(--white);
+      font-size: 21px;
+      line-height: 1.7;
+      margin: 0 0 8px;
+    }
+
+    .english-name {
+      color: #d2d2d2;
+      font-size: 13px;
+      direction: ltr;
+      text-align: right;
+      margin-bottom: 12px;
+      overflow-wrap: anywhere;
+    }
+
+    .price {
+      color: var(--gold);
+      background: #292316;
+      border: 1px solid #69552c;
+      border-radius: 9px;
+      padding: 10px 13px;
+      margin: 0 0 16px;
+      font-size: 22px;
+      font-weight: bold;
+    }
+
+    .price small {
+      font-size: 13px;
+      font-weight: normal;
+      color: var(--light-gold);
+    }
+
+    .description {
+      color: #dedede;
+      font-size: 15px;
+      margin: 0 0 12px;
+    }
+
+    .features-title {
+      color: var(--light-gold);
+      margin: 7px 0;
+      font-weight: bold;
+    }
+
+    .features {
+      color: #e4e4e4;
+      padding-right: 22px;
+      margin: 0 0 18px;
+      font-size: 14px;
+    }
+
+    .features li {
+      margin-bottom: 5px;
+    }
+
+    .button {
+      display: block;
+      width: 100%;
+      text-align: center;
+      padding: 12px;
+      border-radius: 8px;
+      font-weight: bold;
+      font-size: 15px;
+      margin-top: auto;
+      border: none;
+      cursor: pointer;
+    }
+
+    .whatsapp-button {
+      background: var(--green);
+      color: var(--white);
+    }
+
+    .whatsapp-button:hover {
+      background: #117641;
+    }
+
+    .bundle-items {
+      background: #202020;
+      border: 1px solid #4d422c;
+      border-radius: 10px;
+      padding: 13px 17px;
+      margin: 5px 0 17px;
+    }
+
+    .bundle-items h4 {
+      color: var(--light-gold);
+      margin: 0 0 8px;
+    }
+
+    .bundle-items ol {
+      padding-right: 22px;
+      margin: 0;
+      color: #e2e2e2;
+      font-size: 14px;
+    }
+
+    .bundle-items li {
+      margin-bottom: 7px;
+    }
+
+    .bundle-price {
+      border: 1px solid var(--gold);
+      background: #2a2417;
+      border-radius: 10px;
+      padding: 13px;
+      margin: 0 0 15px;
+    }
+
+    .individual-price {
+      color: #e5e5e5;
+      font-size: 15px;
+      margin-bottom: 5px;
+    }
+
+    .individual-price strong {
+      color: var(--light-gold);
+    }
+
+    .full-bundle-price {
+      color: var(--gold);
+      font-size: 25px;
+      font-weight: bold;
+    }
+
+    .saving {
+      color: #d4e9d7;
+      font-size: 13px;
+    }
+
+    .bundle-buttons {
+      display: grid;
+      gap: 10px;
+      margin-top: auto;
+    }
+
+    .secondary-button {
+      background: transparent;
+      color: var(--gold);
+      border: 1px solid var(--gold);
+    }
+
+    .secondary-button:hover {
+      background: #292316;
+    }
+
+    .author-note {
+      color: var(--gray);
+      font-size: 13px;
+      margin-top: 12px;
+    }
+
+    .contact-section {
+      background: #1c1c1c;
+      border-top: 1px solid #514329;
+      border-bottom: 1px solid #514329;
+      text-align: center;
+      padding: 30px 15px;
+      margin-top: 10px;
+    }
+
+    .contact-section h2 {
+      color: var(--gold);
+      margin-top: 0;
+    }
+
+    .contact-section p {
+      color: #dedede;
+    }
+
+    .contact-button {
+      display: inline-block;
+      background: var(--gold);
+      color: #111111;
+      font-weight: bold;
+      padding: 11px 24px;
+      border-radius: 8px;
+      margin-top: 8px;
+    }
+
+    .notice {
+      color: #bfbfbf;
+      text-align: center;
+      font-size: 13px;
+      padding: 20px 0;
+    }
+
+    footer {
+      background: #080808;
+      text-align: center;
+      padding: 22px 10px;
+      border-top: 2px solid var(--gold);
+      color: #bcbcbc;
+      font-size: 13px;
+    }
+
+    footer strong {
+      color: var(--gold);
+    }
+
+    @media (max-width: 700px) {
+      .products {
+        grid-template-columns: 1fr;
+      }
+
+      .hero h2 {
+        font-size: 23px;
+      }
+
+      .logo {
+        font-size: 25px;
+      }
+
+      .product-card {
+        padding: 19px;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-<header>
-    <div class="container header-content">
-        <div class="logo">
-            ALYAMANI STORE
-            <small>متجر اليماني 🇾🇪</small>
+  <header>
+    <div class="container">
+      <h1 class="logo">ALYAMANI STORE</h1>
+      <p class="brand-ar">متجر اليماني 🇾🇪</p>
+      <p class="tagline">منتجات رقمية تساعدك على التنظيم والإنجاز</p>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <h2>ارتقِ بأعمالك وطوّر حياتك الرقمية</h2>
+      <p>
+        اكتشف أدوات رقمية عملية لإدارة المتاجر والمبيعات والإعلانات،
+        إلى جانب موارد تساعدك على استعادة التركيز وتحقيق توازن أفضل
+        في استخدام الهاتف.
+      </p>
+    </div>
+  </section>
+
+  <main class="container">
+
+    <h2 class="section-title">منتجاتنا الرقمية</h2>
+
+    <section class="products">
+
+      <!-- المنتج الأول -->
+      <article class="product-card">
+
+        <span class="product-number">المنتج الأول</span>
+
+        <h3>شيت إدارة المخزون وحساب صافي الربح للمتاجر الإلكترونية</h3>
+
+        <div class="english-name">
+          E-commerce Profit &amp; Inventory Tracker
         </div>
 
-        <a class="header-button" href="#products">
-            اكتشف المنتجات
-        </a>
-    </div>
-</header>
+        <div class="price">
+          25$ <small>— السعر بالدولار الأمريكي</small>
+        </div>
 
-<section class="hero">
-    <div class="container">
-        <h1>متجر اليماني للمنتجات الرقمية</h1>
-
-        <p>
-            أدوات رقمية تساعدك على تنظيم أعمالك،
-            وإدارة مبيعاتك، وتحسين قراراتك التجارية،
-            بالإضافة إلى منتجات معرفية لتطوير حياتك.
+        <p class="description">
+          قالب رقمي لإدارة مخزون متجرك ومتابعة المبيعات والتكاليف،
+          مع حساب صافي الربح ومراقبة الكميات المتوفرة، لمساعدتك
+          على فهم أداء متجرك واتخاذ قرارات أفضل.
         </p>
 
-        <a href="#products" class="hero-button">
-            استكشف منتجاتنا
-        </a>
-    </div>
-</section>
+        <p class="features-title">أبرز المزايا:</p>
 
-<section class="section" id="products">
-    <div class="container">
+        <ul class="features">
+          <li>متابعة المنتجات والكميات المتوفرة.</li>
+          <li>تسجيل المبيعات وتكاليف المنتجات.</li>
+          <li>حساب صافي الربح بصورة منظمة.</li>
+          <li>متابعة المخزون المنخفض.</li>
+          <li>لوحة تحكم تساعدك على مراجعة أداء متجرك.</li>
+        </ul>
 
-        <h2 class="section-title">منتجاتنا الرقمية</h2>
+        <button class="button whatsapp-button"
+          onclick="contactWhatsApp('شيت إدارة المخزون وحساب صافي الربح للمتاجر الإلكترونية - 25 دولارًا')">
+          اطلب المنتج عبر واتساب
+        </button>
 
-        <p class="section-description">
-            اكتشف منتجاتنا الرقمية، واختر ما يناسب احتياجاتك.
-            تواصل معنا لمعرفة السعر وتفاصيل الشراء والتسليم.
+      </article>
+
+
+      <!-- المنتج الثاني -->
+      <article class="product-card">
+
+        <span class="product-number">المنتج الثاني</span>
+
+        <h3>شيت متابعة العملاء والمبيعات بالعمولة</h3>
+
+        <div class="english-name">
+          Sales CRM &amp; Commission Tracker
+        </div>
+
+        <div class="price">
+          25$ <small>— السعر بالدولار الأمريكي</small>
+        </div>
+
+        <p class="description">
+          أداة تنظيمية لمتابعة العملاء والفرص البيعية والطلبات،
+          وتسجيل المبيعات والعمولات المستحقة، لتسهيل متابعة
+          الأداء وتقليل تشتت بيانات العملاء والمبيعات.
         </p>
 
-        <div class="products">
+        <p class="features-title">أبرز المزايا:</p>
 
-            <!-- المنتج الأول -->
-            <article class="product-card">
-                <div class="product-icon">📊</div>
+        <ul class="features">
+          <li>تنظيم بيانات العملاء في مكان واحد.</li>
+          <li>متابعة حالة العملاء والطلبات.</li>
+          <li>تسجيل المبيعات والعمولات.</li>
+          <li>مراجعة نتائج المبيعات بصورة منظمة.</li>
+          <li>تسهيل متابعة العملاء المحتملين.</li>
+        </ul>
 
-                <h3>
-                    شيت إدارة المخزون وحساب صافي الربح
-                </h3>
+        <button class="button whatsapp-button"
+          onclick="contactWhatsApp('شيت متابعة العملاء والمبيعات بالعمولة - 25 دولارًا')">
+          اطلب المنتج عبر واتساب
+        </button>
 
-                <div class="english-name">
-                    E-commerce Profit &amp; Inventory Tracker
-                </div>
+      </article>
 
-                <p class="product-description">
-                    شيت عملي يساعد أصحاب المتاجر الإلكترونية
-                    على تنظيم المخزون ومتابعة المبيعات والتكاليف
-                    وحساب صافي الأرباح بصورة واضحة ومنظمة.
-                </p>
 
-                <div class="features-title">
-                    ماذا يساعدك على إنجازه؟
-                </div>
+      <!-- المنتج الثالث -->
+      <article class="product-card">
 
-                <ul class="features">
-                    <li>متابعة المنتجات والمخزون المتاح.</li>
-                    <li>تسجيل المبيعات والطلبات.</li>
-                    <li>متابعة الكميات المباعة والمتبقية.</li>
-                    <li>تنظيم التكاليف والمصاريف.</li>
-                    <li>حساب صافي الربح.</li>
-                    <li>معرفة المنتجات التي تحتاج إلى إعادة تخزين.</li>
-                </ul>
+        <span class="product-number">المنتج الثالث</span>
 
-                <p class="product-note">
-                    مناسب لأصحاب المتاجر الإلكترونية
-                    والمشاريع التجارية الصغيرة والمتوسطة.
-                </p>
+        <h3>شيت إدارة ميزانية الإعلانات وحساب العائد</h3>
 
-                <a href="#" class="buy-button"
-                   onclick="contactWhatsApp('شيت إدارة المخزون وحساب صافي الربح للمتاجر الإلكترونية (E-commerce Profit & Inventory Tracker)'); return false;">
-                    🛒 استفسر عن المنتج
-                </a>
-            </article>
+        <div class="english-name">
+          ROAS &amp; Ad Spend Calculator
+        </div>
 
-            <!-- المنتج الثاني -->
-            <article class="product-card">
-                <div class="product-icon">👥</div>
+        <div class="price">
+          25$ <small>— السعر بالدولار الأمريكي</small>
+        </div>
 
-                <h3>
-                    شيت متابعة العملاء والمبيعات بالعمولة
-                </h3>
+        <p class="description">
+          قالب يساعدك على تنظيم الإنفاق الإعلاني ومقارنة تكاليف
+          الحملات بالإيرادات، ومتابعة صافي الربح وهامش الربح
+          والعائد على الإنفاق الإعلاني ROAS.
+        </p>
 
-                <div class="english-name">
-                    Sales CRM &amp; Commission Tracker
-                </div>
+        <p class="features-title">أبرز المزايا:</p>
 
-                <p class="product-description">
-                    أداة عملية لتنظيم بيانات العملاء ومتابعة
-                    المبيعات وإدارة العمولات بطريقة سهلة ومنظمة،
-                    مع جمع معلومات العملاء وعمليات البيع في مكان واحد.
-                </p>
+        <ul class="features">
+          <li>تسجيل الإيرادات وتكاليف المنتجات.</li>
+          <li>متابعة مصروفات الإعلانات.</li>
+          <li>حساب العائد على الإنفاق الإعلاني ROAS.</li>
+          <li>متابعة صافي الربح وهامش الربح.</li>
+          <li>مقارنة أداء المنصات الإعلانية.</li>
+        </ul>
 
-                <div class="features-title">
-                    ماذا يساعدك على إنجازه؟
-                </div>
+        <button class="button whatsapp-button"
+          onclick="contactWhatsApp('شيت إدارة ميزانية الإعلانات وحساب العائد ROAS - 25 دولارًا')">
+          اطلب المنتج عبر واتساب
+        </button>
 
-                <ul class="features">
-                    <li>تسجيل وتنظيم بيانات العملاء.</li>
-                    <li>متابعة العملاء والطلبات.</li>
-                    <li>تنظيم عمليات البيع.</li>
-                    <li>متابعة المبيعات والعمولات.</li>
-                    <li>حساب العمولات المستحقة.</li>
-                    <li>تنظيم بيانات المبيعات في مكان واحد.</li>
-                </ul>
+      </article>
 
-                <p class="product-note">
-                    مناسب للمسوقين ومندوبي المبيعات
-                    وأصحاب الأنشطة التجارية التي تعتمد على العمولات.
-                </p>
 
-                <a href="#" class="buy-button"
-                   onclick="contactWhatsApp('شيت متابعة العملاء والمبيعات بالعمولة (Sales CRM & Commission Tracker)'); return false;">
-                    🛒 استفسر عن المنتج
-                </a>
-            </article>
+      <!-- المنتج الرابع -->
+      <article class="product-card">
 
-            <!-- المنتج الثالث -->
-            <article class="product-card">
-                <div class="product-icon">📈</div>
+        <span class="product-number">المنتج الرابع</span>
 
-                <h3>
-                    شيت إدارة ميزانية الإعلانات وحساب العائد
-                </h3>
+        <h3>حزمة التحرر من إدمان الهاتف</h3>
 
-                <div class="english-name">
-                    ROAS &amp; Ad Spend Calculator
-                </div>
+        <div class="english-name">
+          Digital Phone Detox Bundle
+        </div>
 
-                <p class="product-description">
-                    أداة لمتابعة الإنفاق الإعلاني والإيرادات،
-                    وحساب العائد على الإنفاق الإعلاني (ROAS)،
-                    ومساعدتك على فهم أداء حملاتك الإعلانية.
-                </p>
+        <p class="description">
+          حزمة من خمسة منتجات رقمية باللغة العربية والإنجليزية،
+          صُممت لمساعدتك على تنظيم استخدام الهاتف، وتطوير عادات
+          رقمية أكثر وعيًا، واستعادة التركيز والهدوء في حياتك اليومية.
+        </p>
 
-                <div class="features-title">
-                    ماذا يساعدك على إنجازه؟
-                </div>
+        <div class="bundle-items">
 
-                <ul class="features">
-                    <li>تسجيل مصروفات الإعلانات.</li>
-                    <li>متابعة الإيرادات الناتجة عن المبيعات.</li>
-                    <li>حساب العائد على الإنفاق الإعلاني (ROAS).</li>
-                    <li>حساب صافي الربح وهامش الربح.</li>
-                    <li>مقارنة أداء المنصات الإعلانية.</li>
-                    <li>متابعة المنتجات والمبيعات والمخزون.</li>
-                </ul>
+          <h4>محتويات الحزمة:</h4>
 
-                <p class="product-note">
-                    مناسب لأصحاب المتاجر الإلكترونية
-                    والمسوقين وأصحاب المشاريع.
-                </p>
+          <ol>
+            <li>
+              الديتوكس الرقمي: مخطط عملي للتحرر من إدمان الهاتف
+              في 30 يومًا.
+            </li>
 
-                <a href="#" class="buy-button"
-                   onclick="contactWhatsApp('شيت إدارة ميزانية الإعلانات وحساب العائد (ROAS & Ad Spend Calculator)'); return false;">
-                    🛒 استفسر عن المنتج
-                </a>
-            </article>
+            <li>
+              التحدي الرقمي لمدة 30 يومًا.
+            </li>
 
-            <!-- المنتج الرابع -->
-            <article class="product-card">
-                <div class="product-icon">📚</div>
+            <li>
+              مخطط يومي للتركيز والهدوء الرقمي.
+            </li>
 
-                <h3>حزمة التحرر من إدمان الهاتف</h3>
+            <li>
+              حزمة الاقتباسات للتركيز والوعي الرقمي.
+            </li>
 
-                <div class="english-name">
-                    Digital Phone Detox Bundle
-                </div>
-
-                <p class="product-description">
-                    هل تشعر أن هاتفك أصبح يسرق وقتك وتركيزك؟
-                    هل ترغب في استعادة حياتك وسلامك النفسي،
-                    وأن تعيش كل لحظة بوعي وسعادة؟
-                </p>
-
-                <p class="product-description">
-                    حزمة معرفية تضم مجموعة من الكتب باللغتين
-                    العربية والإنجليزية، تساعدك على فهم علاقتك
-                    بالهاتف والتعرف على العادات الرقمية المرهقة،
-                    واكتساب أساليب عملية لاستعادة السيطرة على
-                    وقتك وتركيزك.
-                </p>
-
-                <p class="product-description">
-                    يأخذك الكاتب
-                    <strong>وضاح أحمد حسن الزليل</strong>
-                    في رحلة وعي وتغيير، لتتعلم كيف تجعل الهاتف
-                    أداة تخدمك لا وسيلة تتحكم في وقتك وحياتك.
-                </p>
-
-                <div class="features-title">
-                    ماذا تقدم لك الحزمة؟
-                </div>
-
-                <ul class="features">
-                    <li>مجموعة كتب باللغتين العربية والإنجليزية.</li>
-                    <li>فهم العلاقة مع الهاتف والاستخدام المفرط.</li>
-                    <li>التعرف على العادات الرقمية المرهقة.</li>
-                    <li>التوجه نحو استخدام أكثر وعيًا للتكنولوجيا.</li>
-                    <li>أفكار لبناء عادات رقمية أكثر صحة.</li>
-                </ul>
-
-                <p class="product-note">
-                    مناسبة لكل من يرغب في تقليل تعلقه بالهاتف
-                    واستعادة وقته وتركيزه.
-                </p>
-
-                <a href="#" class="buy-button"
-                   onclick="contactWhatsApp('حزمة التحرر من إدمان الهاتف (Digital Phone Detox Bundle) - مجموعة كتب باللغتين العربية والإنجليزية'); return false;">
-                    📚 استفسر عن الحزمة
-                </a>
-            </article>
+            <li>
+              نظام إعادة ضبط التركيز.
+            </li>
+          </ol>
 
         </div>
 
-        <p class="notice">
-            الأسعار وتفاصيل التسليم تُؤكَّد قبل الشراء.
-            لا ترسل أي مبلغ قبل الاتفاق على المنتج والسعر وطريقة التسليم.
+        <div class="bundle-price">
+
+          <div class="individual-price">
+            سعر المنتج الواحد:
+            <strong>9$</strong>
+          </div>
+
+          <div class="full-bundle-price">
+            الباقة الكاملة: 39$
+          </div>
+
+          <div class="saving">
+            وفّر 6 دولارات عند شراء المنتجات الخمسة معًا.
+          </div>
+
+        </div>
+
+        <div class="bundle-buttons">
+
+          <button class="button whatsapp-button"
+            onclick="contactWhatsApp('حزمة التحرر من إدمان الهاتف الكاملة، وتشمل المنتجات الرقمية الخمسة - 39 دولارًا')">
+            اطلب الحزمة الكاملة — 39$
+          </button>
+
+          <button class="button secondary-button"
+            onclick="contactWhatsApp('أرغب في شراء منتج واحد من حزمة التحرر من إدمان الهاتف بسعر 9 دولارات. أرجو إرسال قائمة المنتجات المتاحة.')">
+            اطلب منتجًا واحدًا — 9$
+          </button>
+
+        </div>
+
+        <p class="author-note">
+          إعداد وتأليف: وضاح أحمد حسن الزليل
         </p>
 
-    </div>
-</section>
+      </article>
 
-<section class="contact" id="contact">
+    </section>
+
+  </main>
+
+
+  <section class="contact-section">
+
     <div class="container">
-        <h2>هل لديك استفسار؟</h2>
 
-        <p>
-            يسعدنا التواصل معك والإجابة عن أسئلتك
-            حول المنتجات الرقمية وطرق الشراء والتسليم.
-        </p>
+      <h2>هل لديك استفسار؟</h2>
 
-        <a href="#" class="whatsapp-button"
-           onclick="contactWhatsApp('السلام عليكم، أريد الاستفسار عن منتجات متجر اليماني ALYAMANI STORE.'); return false;">
-            💬 تواصل معنا عبر واتساب
-        </a>
+      <p>
+        تواصل معنا لمعرفة تفاصيل المنتجات الرقمية وطريقة الحصول عليها.
+      </p>
+
+      <button class="button whatsapp-button"
+        style="max-width: 300px; margin: 15px auto 0;"
+        onclick="contactWhatsApp('مرحبًا، لدي استفسار حول المنتجات الرقمية في متجر اليماني.')">
+        تواصل معنا عبر واتساب
+      </button>
+
     </div>
-</section>
 
-<footer>
-    <div class="container">
-        <p><strong>ALYAMANI STORE | متجر اليماني 🇾🇪</strong></p>
-        <p>منتجات رقمية وأدوات عملية لتطوير أعمالك وحياتك.</p>
-        <p>© <span id="year"></span> جميع الحقوق محفوظة.</p>
-    </div>
-</footer>
+  </section>
 
-<script>
-const WHATSAPP_NUMBER = "967739981457";
 
-function contactWhatsApp(productName) {
-    const message =
-        "السلام عليكم، أريد الاستفسار عن شراء: " +
+  <div class="container">
+
+    <p class="notice">
+      الأسعار بالدولار الأمريكي. يُرجى تأكيد تفاصيل المنتج وطريقة التسليم
+      قبل الدفع. لا ترسل أي مبلغ قبل الاتفاق على المنتج والسعر وطريقة التسليم.
+    </p>
+
+  </div>
+
+
+  <footer>
+
+    <p>
+      <strong>ALYAMANI STORE | متجر اليماني 🇾🇪</strong>
+    </p>
+
+    <p>
+      منتجات رقمية لتنظيم الأعمال وتطوير العادات الرقمية.
+    </p>
+
+    <p>
+      جميع الحقوق محفوظة © <span id="year"></span>
+    </p>
+
+  </footer>
+
+
+  <script>
+    const WHATSAPP_NUMBER = "967739981457";
+
+    function contactWhatsApp(productName) {
+
+      const message =
+        "مرحبًا، أريد الاستفسار عن: " +
         productName +
-        ". أرجو إرسال السعر وتفاصيل المنتج وطريقة الدفع والتسليم.";
+        ". أرجو إرسال تفاصيل المنتج وطريقة التسليم.";
 
-    const whatsappURL =
+      const whatsappURL =
         "https://wa.me/" +
         WHATSAPP_NUMBER +
         "?text=" +
         encodeURIComponent(message);
 
-    window.open(whatsappURL, "_blank");
-}
+      window.open(whatsappURL, "_blank");
+    }
 
-document.getElementById("year").textContent =
-    new Date().getFullYear();
-</script>
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+  </script>
 
 </body>
-    </html>
+            </html>
