@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#111111">
+  <meta name="description" content="متجر اليماني للمنتجات الرقمية والكتب الإلكترونية والقوالب الذكية.">
+  <title>اليماني | متجر المنتجات الرقمية</title>
+
+  <style>
+    :root {
+      --black: #111111;
+      --dark: #1b1b1b;
+      --gold: #d6ad55;
+      --light-gold: #f4d991;
+      --white: #ffffff;
+      --muted: #c5c5c5;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Tahoma, Arial, sans-serif;
+      background: var(--black);
+      color: var(--white);
+      line-height: 1.9;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    .container {
+      width: 92%;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    header {
+      border-bottom: 1px solid #393020;
+      background: #101010;
+      padding: 16px 0;
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      color: var(--gold);
+      font-size: 23px;
+      font-weight: bold;
+    }
+
+    .logo small {
+      display: block;
+      color: var(--white);
+      font-size: 11px;
+      letter-spacing: 2px;
+    }
+
+    .nav-link {
+      color: var(--white);
+      font-size: 14px;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 65px 15px 55px;
+      background: radial-gradient(ellipse at top, #3a2d15 0%, #171717 48%, #111111 78%);
+    }
+
+    .badge {
+      display: inline-block;
+      border: 1px solid var(--gold);
+      color: var(--light-gold);
+      padding: 4px 15px;
+      border-radius: 25px;
+      font-size: 13px;
+      margin-bottom: 18px;
+    }
+
+    .hero h1 {
+      font-size: clamp(30px, 6vw, 48px);
+      line-height: 1.5;
+      margin-bottom: 15px;
+    }
+
+    .hero h1 span {
+      color: var(--gold);
+    }
+
+    .hero p {
+      max-width: 650px;
+      margin: 0 auto 25px;
+      color: var(--muted);
+      font-size: 16px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 11px 24px;
+      border-radius: 8px;
+      background: var(--gold);
+      color: #171717;
+      font-weight: bold;
+      border: 1px solid var(--gold);
+      cursor: pointer;
+      font-size: 14px;
+    }
+
+    .button-outline {
+      background: transparent;
+      color: var(--gold);
+      margin-right: 7px;
+    }
+
+    section {
+      padding: 42px 0;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 25px;
+    }
+
+    .section-title h2 {
+      font-size: 27px;
+      color: var(--gold);
+    }
+
+    .section-title p {
+      color: var(--muted);
+      font-size: 14px;
+      margin-top: 5px;
+    }
+
+    .categories {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 15px;
+    }
+
+    .category {
+      background: var(--dark);
+      border: 1px solid #383126;
+      border-radius: 12px;
+      padding: 22px 12px;
+      text-align: center;
+    }
+
+    .category .icon {
+      font-size: 31px;
+      margin-bottom: 8px;
+    }
+
+    .category h3 {
+      color: var(--gold);
+      font-size: 16px;
+    }
+
+    .category p {
+      color: var(--muted);
+      font-size: 12px;
+      margin-top: 5px;
+    }
+
+    .products {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .product {
+      background: var(--dark);
+      border: 1px solid #383126;
+      border-radius: 13px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .product-cover {
+      min-height: 130px;
+      background: linear-gradient(135deg, #3b301b, #191919);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 48px;
+      border-bottom: 1px solid #453921;
+    }
+
+    .product-info {
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+
+    .product-info h3 {
+      color: var(--light-gold);
+      font-size: 17px;
+      margin-bottom: 8px;
+    }
+
+    .product-info p {
+      color: var(--muted);
+      font-size: 13px;
+      margin-bottom: 15px;
+      flex: 1;
+    }
+
+    .product-label {
+      color: var(--gold);
+      font-size: 11px;
+      margin-bottom: 5px;
+    }
+
+    .price {
+      color: var(--gold);
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 13px;
+    }
+
+    .product .button {
+      text-align: center;
+      width: 100%;
+    }
+
+    .note {
+      color: var(--muted);
+      text-align: center;
+      font-size: 12px;
+      margin-top: 18px;
+    }
+
+    .about-box {
+      background: var(--dark);
+      border-right: 4px solid var(--gold);
+      border-radius: 8px;
+      padding: 22px;
+    }
+
+    .about-box h2 {
+      color: var(--gold);
+      margin-bottom: 10px;
+    }
+
+    .about-box p {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .contact {
+      text-align: center;
+      background: #191919;
+      border-top: 1px solid #383126;
+      border-bottom: 1px solid #383126;
+      padding: 35px 15px;
+    }
+
+    .contact h2 {
+      color: var(--gold);
+      margin-bottom: 8px;
+    }
+
+    .contact p {
+      color: var(--muted);
+      margin-bottom: 18px;
+    }
+
+    footer {
+      padding: 22px 10px;
+      text-align: center;
+      color: #aaaaaa;
+      font-size: 12px;
+    }
+
+    footer span {
+      color: var(--gold);
+    }
+
+    @media (max-width: 600px) {
+      .categories {
+        grid-template-columns: 1fr;
+      }
+
+      .products {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        padding-top: 45px;
+      }
+
+      .nav {
+        justify-content: center;
+      }
+
+      .nav-link {
+        width: 100%;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="container nav">
+      <a class="logo" href="#">
+        اليماني 🇾🇪
+        <small>ALYAMANI STORE</small>
+      </a>
+
+      <a class="nav-link" href="#products">منتجاتنا</a>
+      <a class="nav-link" href="#about">من نحن</a>
+      <a class="nav-link" href="#contact">تواصل معنا</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="badge">متجرك الرقمي من اليمن إلى العالم</div>
+
+      <h1>
+        حلول رقمية ذكية<br>
+        <span>تختصر وقتك وتطور أعمالك</span>
+      </h1>
+
+      <p>
+        اكتشف الكتب الإلكترونية والقوالب الذكية والأدوات الرقمية
+        المصممة لمساعدتك على التعلم وتنظيم أعمالك وتحقيق أهدافك.
+      </p>
+
+      <a href="#products" class="button">اكتشف منتجاتنا</a>
+      <a href="#contact" class="button button-outline">تواصل معنا</a>
+    </section>
+
+    <section id="categories">
+      <div class="container">
+        <div class="section-title">
+          <h2>أقسام المتجر</h2>
+          <p>اختر القسم الذي يناسب احتياجاتك</p>
+        </div>
+
+        <div class="categories">
+          <div class="category">
+            <div class="icon">📊</div>
+            <h3>قوالب الأعمال الذكية</h3>
+            <p>أدوات لتنظيم المخزون والمبيعات والأرباح.</p>
+          </div>
+
+          <div class="category">
+            <div class="icon">📈</div>
+            <h3>التسويق والمالية</h3>
+            <p>قوالب لمتابعة الإعلانات والميزانيات.</p>
+          </div>
+
+          <div class="category">
+            <div class="icon">📚</div>
+            <h3>الكتب الإلكترونية</h3>
+            <p>معرفة عملية تساعدك على تطوير حياتك.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="products">
+      <div class="container">
+        <div class="section-title">
+          <h2>منتجاتنا الرقمية</h2>
+          <p>أدوات عملية ومحتوى رقمي في مكان واحد</p>
+        </div>
+
+        <div class="products">
+
+          <article class="product">
+            <div class="product-cover">📦</div>
+            <div class="product-info">
+              <span class="product-label">قوالب إدارة الأعمال</span>
+              <h3>SMART E-COMMERCE TRACKER PRO</h3>
+              <p>
+                قالب رقمي لمتابعة المنتجات والمخزون والمبيعات
+                وحساب الأرباح ومراقبة أداء متجرك الإلكتروني.
+              </p>
+              <div class="price">السعر يحدد قريباً</div>
+              <a class="button" href="#contact">استفسر عن المنتج</a>
+            </div>
+          </article>
+
+          <article class="product">
+            <div class="product-cover">📣</div>
+            <div class="product-info">
+              <span class="product-label">التسويق والإعلانات</span>
+              <h3>ROAS & Ad Spend Calculator</h3>
+              <p>
+                قالب لمتابعة مصروفات الإعلانات والإيرادات
+                والعائد على الإنفاق الإعلاني وصافي الربح.
+              </p>
+              <div class="price">السعر يحدد قريباً</div>
+              <a class="button" href="#contact">استفسر عن المنتج</a>
+            </div>
+          </article>
+
+          <article class="product">
+            <div class="product-cover">📱</div>
+            <div class="product-info">
+              <span class="product-label">كتاب إلكتروني</span>
+              <h3>التخلص من إدمان الهاتف</h3>
+              <p>
+                كتاب رقمي يساعد القارئ على فهم عادات استخدام الهاتف
+                والتعرف على خطوات عملية لتنظيم وقته.
+              </p>
+              <div class="price">السعر يحدد قريباً</div>
+              <a class="button" href="#contact">استفسر عن الكتاب</a>
+            </div>
+          </article>
+
+          <article class="product">
+            <div class="product-cover">💰</div>
+            <div class="product-info">
+              <span class="product-label">التخطيط المالي</span>
+              <h3>قالب إدارة الميزانية</h3>
+              <p>
+                قالب لتنظيم الإيرادات والمصروفات ومتابعة الميزانية
+                بطريقة واضحة ومنظمة.
+              </p>
+              <div class="price">السعر يحدد قريباً</div>
+              <a class="button" href="#contact">استفسر عن المنتج</a>
+            </div>
+          </article>
+
+        </div>
+
+        <p class="note">
+          المنتجات المعروضة قيد التجهيز للبيع. سيتم تأكيد السعر
+          وتفاصيل التسليم قبل إتمام أي طلب.
+        </p>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="container">
+        <div class="about-box">
+          <h2>عن متجر اليماني</h2>
+          <p>
+            اليماني متجر رقمي يهدف إلى توفير كتب إلكترونية وقوالب
+            وأدوات عملية تساعد الأفراد وأصحاب المشاريع على التعلم
+            وتنظيم أعمالهم والاستفادة من الحلول الرقمية.
+            نعمل على تقديم منتجات واضحة وسهلة الاستخدام مع تطويرها
+            باستمرار بناءً على احتياجات العملاء.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <div class="container">
+        <h2>هل لديك سؤال عن أحد منتجاتنا؟</h2>
+        <p>
+          يسعدنا مساعدتك والإجابة عن استفساراتك قبل الشراء.
+        </p>
+
+        <a class="button" href="mailto:">
+          تواصل معنا عبر البريد الإلكتروني
+        </a>
+
+        <p class="note">
+          ستتم إضافة وسيلة التواصل المباشر بعد إعداد بيانات المتجر.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 <span>ALYAMANI STORE</span> — جميع الحقوق محفوظة.</p>
+    <p>متجر اليماني للمنتجات الرقمية 🇾🇪</p>
+  </footer>
+
+</body>
+  </html>
