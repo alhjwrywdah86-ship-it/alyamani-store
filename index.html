@@ -27,24 +27,53 @@
   <meta name="twitter:description" content="متجر للمنتجات الرقمية والقوالب العملية والخدمات الاحترافية.">
   <meta name="twitter:image" content="https://alhjwrywdah86-ship-it.github.io/alyamani-store/images/hero-banner.jpg">
 
-  <!-- البيانات المنظمة لمحركات البحث -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "OnlineStore",
-    "name": "ALYAMANI STORE",
-    "alternateName": "متجر اليماني",
-    "url": "https://alhjwrywdah86-ship-it.github.io/alyamani-store/",
-    "description": "متجر للمنتجات الرقمية والقوالب العملية والخدمات الاحترافية.",
-    "image": "https://alhjwrywdah86-ship-it.github.io/alyamani-store/images/hero-banner.jpg",
-    "founder": {
-      "@type": "Person",
-      "name": "وضاح أحمد حسن الزليل"
+  <!-- البيانات المنظمة للمتجر والمؤسس -->
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "OnlineStore",
+      "@id": "https://alhjwrywdah86-ship-it.github.io/alyamani-store/#store",
+      "name": "ALYAMANI STORE",
+      "alternateName": [
+        "متجر اليماني",
+        "اليماني",
+        "ALYAMANI"
+      ],
+      "url": "https://alhjwrywdah86-ship-it.github.io/alyamani-store/",
+      "description": "متجر اليماني للمنتجات الرقمية والقوالب العملية والحلول الرقمية والخدمات الاحترافية.",
+      "image": "https://alhjwrywdah86-ship-it.github.io/alyamani-store/images/hero-banner.jpg",
+      "logo": "https://alhjwrywdah86-ship-it.github.io/alyamani-store/images/logo.png",
+      "founder": {
+        "@id": "https://alhjwrywdah86-ship-it.github.io/alyamani-store/#founder"
+      },
+      "areaServed": "Worldwide",
+      "availableLanguage": [
+        "Arabic",
+        "English"
+      ]
     },
-    "areaServed": "Worldwide",
-    "availableLanguage": ["Arabic", "English"]
-  }
-  </script>
+    {
+      "@type": "Person",
+      "@id": "https://alhjwrywdah86-ship-it.github.io/alyamani-store/#founder",
+      "name": "وضاح أحمد حسن الزليل",
+      "alternateName": [
+        "Waddah Ahmed Hassan Al-Zulil",
+        "Waddah Al-Zulil",
+        "وضاح أحمد الزليل"
+      ],
+      "image": "https://alhjwrywdah86-ship-it.github.io/alyamani-store/images/founder.jpg",
+      "url": "https://waddah-alzulail.netlify.app/",
+      "jobTitle": "Founder & CEO",
+      "worksFor": {
+        "@id": "https://alhjwrywdah86-ship-it.github.io/alyamani-store/#store"
+      }
+    }
+  ]
+}
+</script>
 
   <style>
     :root {
