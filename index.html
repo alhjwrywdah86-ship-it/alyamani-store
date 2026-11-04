@@ -7,7 +7,7 @@
 
   <title>اليماني | ALYAMANI STORE</title>
 
-  <meta name="description" content="متجر اليماني للمنتجات الرقمية. أدوات ذكية لإدارة الأعمال وزيادة الأرباح وتنظيم الحياة الرقمية.">
+  <meta name="description" content="متجر اليماني للمنتجات الرقمية والخدمات الاحترافية: أدوات ذكية لإدارة الأعمال، وسيرة ذاتية احترافية مع موقع شخصي تفاعلي ورمز QR.">
 
   <style>
     :root {
@@ -249,6 +249,43 @@
       color: var(--muted);
       font-size: 12px;
       font-weight: normal;
+    }
+
+    /* تنسيق باقات خدمة السيرة الذاتية */
+
+    .service-packages {
+      display: grid;
+      gap: 10px;
+      margin: 16px 0;
+    }
+
+    .service-package {
+      border: 1px solid rgba(214,166,56,.35);
+      border-radius: 9px;
+      padding: 10px;
+      background: #101010;
+    }
+
+    .service-package strong {
+      display: block;
+      color: var(--gold-light);
+      margin-bottom: 4px;
+    }
+
+    .service-package span {
+      color: white;
+      font-weight: bold;
+    }
+
+    .service-package p {
+      min-height: 0;
+      margin-top: 3px;
+      font-size: 12px;
+    }
+
+    .service-order-buttons {
+      display: grid;
+      gap: 8px;
     }
 
     .order-button {
@@ -632,6 +669,94 @@
           </div>
         </article>
 
+
+        <!-- المنتج الخامس: خدمة السيرة الذاتية والموقع الشخصي -->
+
+        <article class="product-card">
+
+          <img
+            class="product-image"
+            src="images/cv-website-service.jpg"
+            alt="خدمة تصميم سيرة ذاتية احترافية وموقع شخصي تفاعلي مع رمز QR">
+
+          <div class="product-info">
+
+            <h3>السيرة الذاتية الذكية | CV احترافي + موقع شخصي تفاعلي مع QR</h3>
+
+            <p>
+              حوّل سيرتك الذاتية إلى هوية مهنية رقمية متكاملة.
+              تصميم عصري بالكحلي والذهبي، وإعادة صياغة بياناتك،
+              مع موقع شخصي يعرض خبراتك ومهاراتك وإنجازاتك.
+            </p>
+
+            <!-- الباقات والأسعار -->
+
+            <div class="service-packages">
+
+              <div class="service-package">
+                <strong>🥉 الباقة الأساسية</strong>
+                <span>$15</span>
+                <p>
+                  سيرة ذاتية احترافية، إعادة صياغة النبذة
+                  والمهارات والخبرات، وملف PDF جاهز للطباعة والإرسال.
+                </p>
+              </div>
+
+              <div class="service-package">
+                <strong>🥈 الباقة الاحترافية</strong>
+                <span>$35</span>
+                <p>
+                  كل مميزات الباقة الأساسية، بالإضافة إلى موقع
+                  شخصي متوافق مع الجوال، ورابط مباشر ورمز QR
+                  وأزرار التواصل.
+                </p>
+              </div>
+
+              <div class="service-package">
+                <strong>🥇 الباقة المتكاملة</strong>
+                <span>$50</span>
+                <p>
+                  كل مميزات الباقة الاحترافية، بالإضافة إلى
+                  تحسين حساب LinkedIn وكتابة نبذة مهنية
+                  وتنسيق الخبرات والمهارات.
+                </p>
+              </div>
+
+            </div>
+
+            <p>
+              مدة التسليم: من 3 إلى 5 أيام عمل بعد استلام البيانات.
+              تشمل الخدمة تعديلين مجانيين بعد المعاينة.
+              استضافة الموقع برابط مجاني، ولا تشمل شراء نطاق خاص.
+            </p>
+
+            <!-- أزرار طلب الباقات -->
+
+            <div class="service-order-buttons">
+
+              <a href="#"
+                 class="order-button"
+                 onclick="orderProduct('خدمة السيرة الذاتية الذكية - الباقة الأساسية', '$15'); return false;">
+                اطلب الباقة الأساسية – $15
+              </a>
+
+              <a href="#"
+                 class="order-button"
+                 onclick="orderProduct('خدمة السيرة الذاتية الذكية - الباقة الاحترافية مع الموقع الشخصي ورمز QR', '$35'); return false;">
+                اطلب الباقة الاحترافية – $35
+              </a>
+
+              <a href="#"
+                 class="order-button"
+                 onclick="orderProduct('خدمة السيرة الذاتية الذكية - الباقة المتكاملة مع تحسين LinkedIn', '$50'); return false;">
+                اطلب الباقة المتكاملة – $50
+              </a>
+
+            </div>
+
+          </div>
+        </article>
+
       </div>
     </div>
   </section>
@@ -802,4 +927,4 @@
   </script>
 
 </body>
-            </html>
+  </html>
