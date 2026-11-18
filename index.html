@@ -317,7 +317,7 @@
       font-weight: normal;
     }
 
-    /* تنسيق باقات خدمة السيرة الذاتية */
+    /* تنسيق باقات الخدمات والمنتجات متعددة الباقات */
 
     .service-packages {
       display: grid;
@@ -422,7 +422,8 @@
       border-radius: 12px;
       border: 3px solid var(--gold);
     }
-        .founder-info h3 {
+
+    .founder-info h3 {
       color: var(--gold-light);
       font-size: 23px;
       margin-bottom: 5px;
@@ -607,6 +608,87 @@
 
       <div class="products">
 
+        <!-- المنتج الجديد: حقيبة الذكاء الاصطناعي لأصحاب المتاجر الإلكترونية -->
+
+        <article class="product-card">
+
+          <img
+            class="product-image"
+            src="images/ai-toolkit.jpg"
+            alt="حقيبة الذكاء الاصطناعي للمتاجر الإلكترونية AI E-COMMERCE TOOLKIT">
+
+          <div class="product-info">
+
+            <h3>AI E-COMMERCE TOOLKIT | حقيبة الذكاء الاصطناعي للمتاجر</h3>
+
+            <p>
+              نظام تشغيل متكامل من 8 وحدات مترابطة للعمل من هاتفك:
+              أوامر وصف المنتجات، كتابة الإعلانات، تصميم الصور، الرد على العملاء،
+              ولوحة تحكم مبرمجة لحساب الأرباح.
+            </p>
+
+            <!-- الباقات والأسعار -->
+
+            <div class="service-packages">
+
+              <div class="service-package">
+                <strong>📦 النسخة الأساسية (Basic)</strong>
+                <span>$9</span>
+                <p>دليل مكتبة الأوامر الاحترافية (8 وحدات) + دليل البدء السريع (PDF).</p>
+              </div>
+
+              <div class="service-package">
+                <strong>⭐ النسخة الاحترافية (Pro)</strong>
+                <span>$19</span>
+                <p>الدليل الكامل + حزمة القوالب الجاهزة (المنافسين، المحتوى، ردود واتساب).</p>
+              </div>
+
+              <div class="service-package">
+                <strong>💎 النسخة المتكاملة (Complete)</strong>
+                <span>$29</span>
+                <p>الدليل + القوالب + لوحة التحكم المالية والشاملة (Google Sheets).</p>
+              </div>
+
+            </div>
+
+            <!-- قسم المعاينة البصرية لحماية الرابط المباشر -->
+
+            <div style="border: 2px solid #1a73e8; border-radius: 12px; padding: 15px; background-color: #f8fbff; text-align: center; margin: 15px 0; direction: rtl;">
+              <h4 style="color: #1a73e8; margin-bottom: 8px; font-size: 14px;">📊 معاينة لوحة التحكم الذكية (Business Dashboard)</h4>
+              <img src="images/dashboard-preview.jpg" alt="معاينة لوحة التحكم المالية في Google Sheets" style="max-width: 100%; border-radius: 6px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); margin: 10px auto;">
+              <p style="font-size: 13px; font-weight: bold; color: #222; background: #e8f0fe; padding: 10px; border-radius: 6px;">
+                🔒 يحصل مشترو الباقة المتكاملة ($29) على رابط فوري لنسخ لوحة التحكم المبرمجة إلى حسابهم بضغطة زر.
+              </p>
+            </div>
+
+            <!-- أزرار طلب الباقات -->
+
+            <div class="service-order-buttons">
+
+              <a href="#"
+                 class="order-button"
+                 onclick="orderProduct('AI E-COMMERCE TOOLKIT - النسخة الأساسية', '$9'); return false;">
+                اطلب النسخة الأساسية – $9
+              </a>
+
+              <a href="#"
+                 class="order-button"
+                 onclick="orderProduct('AI E-COMMERCE TOOLKIT - النسخة الاحترافية', '$19'); return false;">
+                اطلب النسخة الاحترافية – $19
+              </a>
+
+              <a href="#"
+                 class="order-button"
+                 onclick="orderProduct('AI E-COMMERCE TOOLKIT - النسخة المتكاملة', '$29'); return false;">
+                اطلب النسخة المتكاملة – $29
+              </a>
+
+            </div>
+
+          </div>
+        </article>
+
+
         <!-- المنتج الأول -->
 
         <article class="product-card">
@@ -790,7 +872,7 @@
             </div>
 
             <p>
-              مدة التسليم: من 3 إلى 5 أيام عمل بعد استلام البيانات.
+              مدة التسليم: من 3 إلى 5 أيام عمل بعد استلاستخدام البيانات.
               تشمل الخدمة تعديلين مجانيين بعد المعاينة.
               استضافة الموقع برابط مجاني، ولا تشمل شراء نطاق خاص.
             </p>
@@ -825,7 +907,9 @@
       </div>
     </div>
   </section>
-    <!-- مميزات المتجر -->
+
+
+  <!-- مميزات المتجر -->
 
   <section class="section" id="features">
     <div class="container">
@@ -992,4 +1076,4 @@
   </script>
 
 </body>
-</html>
+  </html>
